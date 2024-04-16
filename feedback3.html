@@ -2,88 +2,15 @@
 <html>
 <head>
 	<title>Feedback</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-		}
-
-		header {
-			background-color: #333;
-			color: #fff;
-			padding: 1rem;
-		}
-
-		nav {
-			background-color: #555;
-			color: #fff;
-			padding: 1rem;
-			display: flex;
-			justify-content: space-around;
-		}
-
-		nav a {
-			color: #fff;
-			text-decoration: none;
-		}
-
-		main {
-			padding: 2rem;
-			max-width: 800px;
-			margin: 2rem auto;
-		}
-
-		form {
-			display: flex;
-			flex-direction: column;
-			margin-bottom: 1rem;
-		}
-
-		label {
-			margin-bottom: 0.5rem;
-		}
-
-		input[type="text"],
-		input[type="email"],
-		textarea {
-			border: 1px solid #ccc;
-			border-radius: 4px;
-			padding: 0.5rem;
-			margin-bottom: 1rem;
-			width: 100%;
-		}
-
-		textarea {
-			height: 10rem;
-		}
-
-		button {
-			background-color: #333;
-			color: #fff;
-			border: none;
-			border-radius: 4px;
-			padding: 0.5rem;
-			cursor: pointer;
-		}
-
-		button:hover {
-			background-color: #555;
-		}
-
-		#feedback-message {
-			color: green;
-			font-weight: bold;
-			margin-top: 1rem;
-		}
-	</style>
+	<link rel="stylesheet" href="css/estilo.css">
+	<link rel="stylesheet" href="css/response.css">
 </head>
 <body>
 	<header>
 		<h1>Feedback</h1>
 	</header>
 	<nav>
-		<a href="pagi.html">Página inicial</a>
+		<a href="index.html">Página inicial</a>
 		<a href="catalog.html">Catálogo</a>
 	</nav>
 	<main>
@@ -103,33 +30,33 @@
 		<p id="feedback-message"></p>
 	</main>
 	<footer>
-		<!-- Rodapé do feedback -->
+		&copy; Dê seu feedback TOUR VIRTUAL SESI!
 	</footer>
 	<script>
-		// Verifique se o formulário foi enviado
+		
 		if (localStorage.getItem('feedback-message')) {
-			// Exiba a mensagem de feedback
+			
 			const feedbackMessage = document.getElementById('feedback-message');
 			feedbackMessage.textContent = localStorage.getItem('feedback-message');
 
-			// Limpe a mensagem de feedback após 5 segundos
+			
 			setTimeout(() => {
 				localStorage.removeItem('feedback-message');
 				feedbackMessage.textContent = '';
 			}, 5000);
 		}
 
-		// Envie o formulário de feedback
+		
 		const feedbackForm = document.getElementById('feedback-form');
 		feedbackForm.addEventListener('submit', (event) => {
 			event.preventDefault();
 
-			// Obtenha os valores dos campos do formulário
+			
 			const nome = document.getElementById('nome').value;
 			const email = document.getElementById('email').value;
 			const mensagem = document.getElementById('mensagem').value;
 
-			// Salve o feedback no LocalStorage
+			
 			const feedback = {
 				nome,
 				email,
@@ -140,11 +67,11 @@
 			feedbacks.push(feedback);
 			localStorage.setItem('feedbacks', JSON.stringify(feedbacks));
 
-			// Exiba a mensagem de feedback
+			
 			const feedbackMessage = document.getElementById('feedback-message');
 			feedbackMessage.textContent = 'Obrigado pelo seu feedback!';
 
-			// Limpe os campos do formulário
+			
 			feedbackForm.reset();
 		});
 	</script>

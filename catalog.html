@@ -1,76 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Catalog</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-			background-color: #f0f0f0;
-		}
-		header {
-			background-color: #333;
-			color: #fff;
-			padding: 1rem;
-			text-align: center;
-		}
-		main {
-			padding: 2rem;
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			justify-content: space-around;
-		}
-		main h1 {
-			flex-basis: 100%;
-			margin-bottom: 2rem;
-		}
-		main .card {
-			background-color: #fff;
-			border-radius: 5px;
-			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-			padding: 1.5rem;
-			flex-basis: 45%;
-			margin-bottom: 2rem;
-			text-align: center;
-		}
-		main .card img {
-			width: 100%;
-			border-radius: 5px;
-			margin-bottom: 1rem;
-		}
-	</style>
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="css/stilo.css">
+    <link rel="stylesheet" href="css/response.css">
 </head>
 <body>
-	<header>
-		<h1>Catalog</h1>
-	</header>
-	<main>
-		<h1>Check out our catalog</h1>
-		<div class="card">
-			<h1>Trilha de Áudio</h1>
-    <audio controls>
-        <source src="d:\Usuário\Downloads\chipmunk-laugh.mp3" type="audio/mpeg">
-        Seu navegador não suporta a tag de áudio.
-    </audio>
-			<img src="d:\Usuário\Downloads\IMG_3586.jpg" alt="Catalog Image">
-			<h2>Item 1</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices.</p>
-		</div>
-		<div class="card">
-			<h1>Trilha de Áudio</h1>
-    
-    <audio controls>
-        <source src="d:\Usuário\Downloads\chipmunk-laugh.mp3" type="audio/mpeg">
-        Seu navegador não suporta a tag de áudio.
-    </audio>
-			<img src="https://via.placeholder.com/350x150" alt="Catalog Image">
-			<h2>Item 2</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices.</p>
-		</div>
-        <a href="pagi.html" class="back-button">Voltar para a página inicial</a>
-		<a href="feedback3.html">Feedback</a>
-	</main>
+    <header>
+        <h1>Catálogo</h1>
+    </header>
+    <nav>
+        <a href="index.html" class="back-button">Página Inicial</a>
+        <a href="feedback3.html">Feedback</a>
+    </nav>
+    <main>
+        <h1>Dê uma olhada no nosso catálogo de Tours!</h1>
+        <div class="card">
+            <h1>Trilha de Áudio</h1>
+            <audio controls>
+                <source src="d:\Usuário\Downloads\chipmunk-laugh.mp3" type="audio/mpeg">
+            </audio>
+            <img src="img/img1.jpg" alt="Imagem do Catálogo">
+            <a href="paginafoto.html">
+                <h2 class="button-link">Sala de Aula Sesi</h2>
+            </a>
+            <p>Ponto de informação a colocar.</p>
+        </div>
+    </main>
+    <footer>
+        &copy; Tour Virtual SESI
+    </footer>
 </body>
 </html>
+
