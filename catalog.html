@@ -2,9 +2,10 @@
 <html>
 <head>
     <title>Catálogo</title>
-    <link rel="stylesheet" href="css/stilocata.css">
+    <link rel="stylesheet" href="css/styleCatalogo.css">
     <link rel="stylesheet" href="css/response.css">
     <script src="js/catalog.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 <body>
     <header>
@@ -17,10 +18,6 @@
     <main>
         <h1>Dê uma olhada no nosso catálogo de Tours!</h1>
         <div class="card">
-            <h1>Trilha de Áudio</h1>
-            <audio id="audioPlayer" controls>
-                <source src="d:\Usuário\Downloads\chipmunk-laugh.mp3" type="audio/mpeg">
-            </audio>
             <img src="img/img1.jpg" alt="Imagem do Catálogo">
             <a href="paginafoto.html">
                 <h2 class="button-link">Sala de Aula Sesi</h2>
@@ -28,6 +25,9 @@
             <p id="tourDescription">Bem-vindo a Sala de Aula SESI, localizada no Colégio Sesi de Maringá. Está é uma sala aconchegante, moderna e temática vislumbrante, contém uma metodologia inovadora, com equipes que compõem mesas de 6 lugares, TV para ensinos adequados a geração moderna e entre outras coisas que você vai descobrir AGORA.</p>
             <button id="playButton">Ler Texto</button>
             <button id="stopButton">Parar Leitura</button>
+            <h2><button id="favorite-button">Favorite este Tour</button></h2>
+            <p id="favorite-message"></p>
+        <script src="js/favorita.js"></script>
         </div>
     </main>
     <footer>

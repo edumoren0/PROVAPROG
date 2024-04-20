@@ -2,8 +2,9 @@
 <html>
 <head>
     <title>Tour Sala de Aula!</title>
-    <link rel="stylesheet" href="css/stileft.css">
+    <link rel="stylesheet" href="css/styleFotos.css">
     <link rel="stylesheet" href="css/response.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 <body>
     <header>
@@ -14,13 +15,23 @@
     </nav>
     <main>
         <h2>Fotos</h2>
-        <div class="gallery">
-            <img src="img/img2.jpg">
-            <img src="img/img3.jpg">
-            <img src="img/img4.jpg">
-            <img src="img/img5.jpg">
-            
+
+        <div class = "slider">
+            <div class="gallery">
+                <img class ="slide" src="img/img2.jpg" alt = "imagem">
+                <img class ="slide" src="img/img3.jpg" alt = "imagem">
+                <img class ="slide" src="img/img4.jpg" alt = "imagem">
+                <img class ="slide" src="img/img5.jpg" alt = "imagem">
+            </div>
+            <button class = "ante" onclick="ante_slide()">&#10094</button>
+            <button class = "prox" onclick="prox_slide()">&#10095</button>
         </div>
+        
+        <a id="j" href="feedback3.html" class="feedback-button">Gostou do Tour? Então deixe um feedback!</a>
+
+
+        <script src="js/slider.js"></script>
+
     </main>
     <footer>
         &copy; Tour Virtual SESI

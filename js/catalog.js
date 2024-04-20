@@ -1,37 +1,37 @@
-// Variável global para controlar o estado da leitura
+// variavel global para controlar o estado da leitura
 var isReading = false;
 
-// Função para ler o texto em voz alta
+// função para ler o texto em voz alta, que vai ser a narração dos ponto de info
 function readText() {
     var tourDescription = document.getElementById("tourDescription").textContent;
     var speech = new SpeechSynthesisUtterance(tourDescription);
     
-    // Iniciar a leitura do texto
+    //inicia a leitura do texto
+    speech.lang = "pt-BR";
     window.speechSynthesis.speak(speech);
     
-    // Alterar o estado da leitura para verdadeiro
+    // alterar o estado da leitura para verdadeiro
     isReading = true;
     
-    // Adicionar um evento de fim de fala para atualizar o estado da leitura
+    //adiciona um evento de fim de fala para att o estado da leitura
     speech.onend = function() {
         isReading = false;
     };
 }
 
-// Função para parar a leitura
+// função para parar a leitura
 function stopReading() {
-    // Verificar se a leitura está ocorrendo
+    // verifica se a leitura está ocorrendo
     if (isReading) {
-        // Parar a leitura
+        // para a leitura
         window.speechSynthesis.cancel();
-        // Atualizar o estado da leitura para falso
+        // att o estado da leitura para falso
         isReading = false;
     }
 }
 
-// Adicionando o evento de clique ao botão de leitura
+// adicionando o clique ao botão de leitura
 document.getElementById("playButton").addEventListener("click", readText);
 
-// Adicionando o evento de clique ao botão de parar leitura
+// adicionando o clique ao botão de parar leitura
 document.getElementById("stopButton").addEventListener("click", stopReading);
-
